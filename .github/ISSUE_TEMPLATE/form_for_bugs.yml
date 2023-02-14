@@ -1,8 +1,12 @@
-name: 🐞 Bug
-description: File a bug/issue
-title: "[BUG] <title>"
-labels: [Bug, Needs Triage]
+name: 🐞 Bug Report
+description: Submit a bug report
+title: "[BUG] <descriptive title here>"
+labels: [bug]
 body:
+- type: markdown
+  attributes:
+    value: |
+      **Thanks for taking the time to fill out this bug report!**
 - type: checkboxes
   attributes:
     label: Is there an existing issue or discussion for this? 
@@ -10,22 +14,18 @@ body:
     options:
     - label: I have searched the existing issues and discussions
       required: true
-- type: markdown
-  attributes:
-    value: |
-      Thanks for taking the time to fill out this bug report!
 - type: textarea
   attributes:
     label: Current Behavior
     description: A concise description of what you're experiencing.
   validations:
-    required: false
+    required: true
 - type: textarea
   attributes:
     label: Expected Behavior
     description: A concise description of what you expected to happen.
   validations:
-    required: false
+    required: true
 - type: textarea
   attributes:
     label: Steps To Reproduce
@@ -43,29 +43,15 @@ body:
     description: |
       examples:
         - **OS**: Ubuntu 20.04
-        - **Node**: 13.14.0
-        - **npm**: 7.6.3
+        - **VSCode**: 1.74.0
+        - **VSCode-XP**: 3.0.1
     value: |
         - OS:
-        - Node:
-        - npm:
+        - VSCode:
+        - VSCode-XP:
     render: markdown
   validations:
-    required: false
-- type: textarea
-  id: logs
-  attributes:
-    label: Relevant log output
-    description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-    render: shell
-- type: checkboxes
-  id: terms
-  attributes:
-    label: Code of Conduct
-    description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-    options:
-      - label: I agree to follow this project's Code of Conduct
-        required: true
+    required: true
 - type: textarea
   attributes:
     label: Anything else?
