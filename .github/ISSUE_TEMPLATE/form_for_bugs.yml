@@ -11,9 +11,9 @@ body:
     - label: I have searched the existing issues and discussions
       required: true
 - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
+  attributes:
+    value: |
+      Thanks for taking the time to fill out this bug report!
 - type: textarea
   attributes:
     label: Current Behavior
